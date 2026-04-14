@@ -364,7 +364,38 @@
     .dot.active { background: #7F77DD; }
 
     /* CONTACT */
-    .contact-form {
+    .contact-options {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .contact-option {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      flex: 1;
+    }
+
+    .contact-option-text {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .contact-divider {
+      width: 1px;
+      height: 80px;
+      background: #2a2a2a;
+      flex-shrink: 0;
+    }
+
+    .contact-ghost {
+      border-color: #7F77DD;
+      color: #7F77DD;
+    }
+
+    .contact-ghost:hover { background: transparent; color: #AFA9EC; border-color: #AFA9EC; }
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -395,9 +426,22 @@
 
     /* FOOTER */
     footer {
-      border-top: 1px solid #1e1e1e;
-      text-align: center;
-      padding: 2rem;
+      border-top: 1px solid #2a2a2a;
+      background: #0e0e0e;
+      padding: 0 2rem;
+      height: 56px;
+    }
+
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-copy {
       font-size: 0.8rem;
       color: #444;
     }
@@ -445,6 +489,9 @@
     #backToTop:hover { border-color: #7F77DD; }
 
     @media (max-width: 768px) {
+      .contact-options { flex-direction: column; gap: 1.5rem; }
+      .contact-divider { display: none; }
+
       .nav-links { display: none; }
       .nav-icons { display: none; }
 
@@ -480,32 +527,32 @@
           <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
         </svg>
       </a>
-      <!-- FILL IN: replace # with your GitHub URL -->
-      <a href="#" target="_blank" rel="noopener" aria-label="GitHub">
+      <!-- GitHub -->
+      <a href="https://github.com/jasleen101010" target="_blank" rel="noopener" aria-label="GitHub">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
           <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
         </svg>
       </a>
-      <!-- FILL IN: replace # with your YouTube URL -->
-      <a href="#" target="_blank" rel="noopener" aria-label="YouTube">
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@jasleenkaursondhi" target="_blank" rel="noopener" aria-label="YouTube">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
           <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0e0e0e"/>
         </svg>
       </a>
-      <!-- FILL IN: replace # with your Kaggle URL -->
-      <a href="#" target="_blank" rel="noopener" aria-label="Kaggle">
+      <!-- Kaggle -->
+      <a href="https://www.kaggle.com/jasleensondhi" target="_blank" rel="noopener" aria-label="Kaggle">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
           <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.334z"/>
         </svg>
       </a>
-      <!-- FILL IN: replace # with your Twitter/X URL -->
-      <a href="#" target="_blank" rel="noopener" aria-label="Twitter / X">
+      <!-- Twitter / X -->
+      <a href="https://x.com/jasleen101010" target="_blank" rel="noopener" aria-label="Twitter / X">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
           <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
         </svg>
       </a>
-      <!-- FILL IN: replace # with your Topmate URL -->
-      <a href="#" target="_blank" rel="noopener" aria-label="Topmate">
+      <!-- Topmate -->
+      <a href="https://topmate.io/jasleen101010" target="_blank" rel="noopener" aria-label="Topmate">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
         </svg>
@@ -604,12 +651,7 @@
 
         <!-- CARD 1 -->
         <div class="card">
-          <!-- ADD IMAGE: replace this div with <img src="your-image.jpg" alt="CLARA project"> -->
-          <div class="card-img">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7F77DD" stroke-width="1.5">
-              <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
-            </svg>
-          </div>
+          <img src="assets/card-clara.jpg" alt="CLARA project" class="card-img" style="object-fit:cover;">
           <div class="card-body">
             <span class="card-badge">AI · AWS · Hackathon</span>
             <p class="card-title">CLARA</p>
@@ -690,22 +732,30 @@
   <!-- CONTACT -->
   <section id="contact">
     <p class="section-label">say hello</p>
-    <!-- FILL IN: replace your-email@gmail.com with your actual email -->
-    <form class="contact-form" action="mailto:your-email@gmail.com" method="POST" enctype="text/plain">
+    <div class="contact-options">
+
+      <div class="contact-option">
+        <p class="contact-option-text">have a question or just want to say hi?</p>
+        <a href="mailto:jasleensondhi@gmail.com" class="btn-pill filled">send me an email</a>
+      </div>
+
+      <div class="contact-divider"></div>
+
+      <div class="contact-option">
+        <p class="contact-option-text">want guidance, a chat, or a collaboration?</p>
+        <a href="https://topmate.io/jasleen101010" target="_blank" rel="noopener" class="btn-pill filled">book a call on topmate</a>
+      </div>
+
+    </div>
+
+    <!-- FORM START
+    <form class="contact-form" action="mailto:jasleensondhi@gmail.com" method="POST" enctype="text/plain">
       <input type="text" name="name" placeholder="Name" required />
       <input type="email" name="email" placeholder="Email" required />
       <textarea name="message" placeholder="Message" required></textarea>
       <button type="submit" class="btn-filled" style="align-self:flex-start;">Send message</button>
     </form>
-    <!--
-      TO USE FORMSPREE (free, no backend needed):
-      1. Go to https://formspree.io and create a free account
-      2. Create a new form and copy your form endpoint (looks like https://formspree.io/f/xxxxxxxx)
-      3. Replace the action attribute above with your Formspree endpoint
-      4. Change method="POST" and remove enctype="text/plain"
-      5. Add <input type="hidden" name="_subject" value="New message from portfolio"> for a nice email subject
-      That's it — Formspree handles delivery and spam filtering for free up to 50 submissions/month.
-    -->
+    FORM END -->
   </section>
 
   <!-- BACK TO TOP -->
@@ -717,7 +767,30 @@
 
   <!-- FOOTER -->
   <footer>
-    jasleen101010 · 2026
+    <div class="footer-inner">
+      <a href="#hero" class="nav-name">jasleen</a>
+      <div class="nav-icons">
+        <a href="https://www.linkedin.com/in/jasleensondhi/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/jasleen101010" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@jasleenkaursondhi" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0e0e0e"/></svg>
+        </a>
+        <a href="https://www.kaggle.com/jasleensondhi" target="_blank" rel="noopener" aria-label="Kaggle">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.334z"/></svg>
+        </a>
+        <a href="https://x.com/jasleen101010" target="_blank" rel="noopener" aria-label="Twitter / X">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://topmate.io/jasleen101010" target="_blank" rel="noopener" aria-label="Topmate">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+        </a>
+      </div>
+      <span class="footer-copy">jasleen · 2026</span>
+    </div>
   </footer>
 
   <script>
