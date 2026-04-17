@@ -93,6 +93,15 @@
     #hero {
       padding-top: 40px;
       padding-bottom: 24px;
+      background: linear-gradient(135deg, #0e0e0e, #0f0e1a, #111827, #0e0e0e);
+      background-size: 400% 400%;
+      animation: heroShift 12s ease infinite;
+    }
+
+    @keyframes heroShift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .hero-grid {
@@ -768,7 +777,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
-      <a href="#hero" class="nav-name">jasleen</a>
+      <a href="#hero" class="nav-name">jasleen101010</a>
       <div class="nav-icons">
         <a href="https://www.linkedin.com/in/jasleensondhi/" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
