@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>jasleen101010</title>
+  <title>jasleen sondhi</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -23,13 +23,20 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: #0e0e0e;
-      border-bottom: 1px solid #2a2a2a;
+      background: rgba(14, 14, 14, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid transparent;
       padding: 0 2rem;
       height: 56px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      transition: border-color 0.3s ease;
+    }
+
+    nav.scrolled {
+      border-bottom-color: #2a2a2a;
     }
 
     .nav-name {
@@ -93,15 +100,6 @@
     #hero {
       padding-top: 40px;
       padding-bottom: 24px;
-      background: linear-gradient(135deg, #0e0e0e, #0f0e1a, #111827, #0e0e0e);
-      background-size: 400% 400%;
-      animation: heroShift 12s ease infinite;
-    }
-
-    @keyframes heroShift {
-      0%   { background-position: 0% 50%; }
-      50%  { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
     }
 
     .hero-grid {
@@ -372,6 +370,62 @@
 
     .dot.active { background: #7F77DD; }
 
+    /* WRITING */
+    .writing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .writing-card {
+      background: #141414;
+      border: 1px solid #1e1e1e;
+      border-radius: 10px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: border-color 0.2s, transform 0.2s;
+      text-decoration: none;
+    }
+
+    .writing-card:hover {
+      border-color: #2a2a2a;
+      transform: translateY(-3px);
+    }
+
+    .writing-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #e8e8e8;
+      line-height: 1.4;
+    }
+
+    .writing-date {
+      font-size: 0.75rem;
+      color: #555;
+    }
+
+    .writing-excerpt {
+      font-size: 0.875rem;
+      color: #666;
+      line-height: 1.55;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .writing-link {
+      font-size: 0.8rem;
+      color: #7F77DD;
+      margin-top: auto;
+      padding-top: 0.5rem;
+    }
+
+    .writing-loading { color: #555; font-size: 0.875rem; }
+    .writing-error { color: #555; font-size: 0.875rem; }
+
     /* CONTACT */
     .contact-options {
       display: flex;
@@ -498,6 +552,7 @@
     #backToTop:hover { border-color: #7F77DD; }
 
     @media (max-width: 768px) {
+      .writing-grid { grid-template-columns: 1fr; }
       .contact-options { flex-direction: column; gap: 1.5rem; }
       .contact-divider { display: none; }
 
@@ -660,7 +715,7 @@
 
   <!-- WORK -->
   <section id="work">
-    <p class="section-label">what i've been building</p>
+    <p class="section-label">what i've been up to</p>
     <div class="carousel-wrapper">
       <div class="carousel-track" id="carouselTrack">
 
@@ -670,37 +725,27 @@
           <div class="card-body">
             <span class="card-badge">AI · AWS · Hackathon</span>
             <p class="card-title">CLARA</p>
-            <p class="card-desc">Three-agent complaint resolution pipeline built on Amazon Bedrock for the Women in Financial Services hackathon.</p>
+            <p class="card-desc">Three-agent complaint resolution pipeline built using AWS Kiro for the  AWS Women in Financial Services hackathon.</p>
           </div>
         </div>
 
         <!-- CARD 2 -->
         <div class="card">
-          <!-- ADD IMAGE: replace this div with <img src="your-image.jpg" alt="Fraud detection talk"> -->
-          <div class="card-img">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7F77DD" stroke-width="1.5">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>
-          </div>
+          <img src="assets/card-ghc.jpg" alt="Fraud detection talk" class="card-img" style="object-fit:cover;">
           <div class="card-body">
             <span class="card-badge">Speaking · GHC 2026</span>
             <p class="card-title">Fraud detection talk</p>
-            <p class="card-desc">Speaker proposal for Grace Hopper 2026 on the evolution of banking fraud detection: rules to AI.</p>
+            <p class="card-desc">Speaker proposal submitted for Grace Hopper 2026 on the evolution of banking fraud detection: rules to AI.</p>
           </div>
         </div>
 
         <!-- CARD 3 -->
         <div class="card">
-          <!-- ADD IMAGE: replace this div with <img src="your-image.jpg" alt="Women in tech"> -->
-          <div class="card-img">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7F77DD" stroke-width="1.5">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </div>
+          <img src="assets/card-github.jpg" alt="GitHub Constellation" class="card-img" style="object-fit:cover;">
           <div class="card-body">
             <span class="card-badge">Community</span>
-            <p class="card-title">Women in tech</p>
-            <p class="card-desc">Active in IWD, GHC, and FinServ communities. Building thought leadership on LinkedIn.</p>
+            <p class="card-title">Attending GitHub Constellation</p>
+            <p class="card-desc">Exclusive glimpse into the new GitHub experience, launch of GitHub Copilot SDK and hearing teams from Sarvam & Swiggy..</p>
           </div>
         </div>
 
@@ -713,8 +758,8 @@
             </svg>
           </div>
           <div class="card-body">
-            <span class="card-badge">AWS · Bedrock</span>
-            <p class="card-title">Agentic AI landscape</p>
+            <span class="card-badge">Upskilling</span>
+            <p class="card-title">Lean Six Sigma Yellow Belt</p>
             <p class="card-desc">Exploring Bedrock AgentCore, Knowledge Base, and multi-agent orchestration patterns.</p>
           </div>
         </div>
@@ -741,6 +786,14 @@
       <button class="arrow-btn" id="prevBtn" aria-label="Previous">&#8592;</button>
       <button class="arrow-btn" id="nextBtn" aria-label="Next">&#8594;</button>
       <div class="dots" id="dots"></div>
+    </div>
+  </section>
+
+  <!-- LATEST WRITING -->
+  <section id="writing">
+    <p class="section-label">latest writing</p>
+    <div class="writing-grid" id="writingGrid">
+      <p class="writing-loading">Loading articles...</p>
     </div>
   </section>
 
@@ -807,11 +860,55 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
         </a>
       </div>
-      <span class="footer-copy">jasleen · 2026</span>
+      <span class="footer-copy">jasleen sondhi · 2026</span>
     </div>
   </footer>
 
   <script>
+    // Medium RSS feed
+    (function() {
+      const grid = document.getElementById('writingGrid');
+
+      function showFallback() {
+        grid.innerHTML = '<p class="writing-error">Couldn\'t load articles right now. <a href="https://jasleen101010.medium.com" target="_blank" style="color:#7F77DD">Visit Medium →</a></p>';
+      }
+
+      const API = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent('https://jasleen101010.medium.com/feed')}`;
+
+      grid.innerHTML = '<p class="writing-loading">Loading articles...</p>';
+
+      fetch(API)
+        .then(r => r.json())
+        .then(data => {
+          if (data.status !== 'ok' || !data.items?.length) { showFallback(); return; }
+          grid.innerHTML = '';
+          data.items.slice(0, 3).forEach(item => {
+            const date = new Date(item.pubDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+            const excerpt = (item.description || '').replace(/<[^>]*>/g, '').trim().slice(0, 200);
+            const thumb = item.thumbnail || item.enclosure?.link ||
+              (item.content?.match(/<img[^>]+src="([^"]+)"/)?.[1]) || '';
+            const thumbHtml = thumb
+              ? `<img src="${thumb}" alt="${item.title}" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;display:block;margin-bottom:1rem;">`
+              : `<div style="width:100%;aspect-ratio:16/9;background:#1e1e2e;border-radius:6px;margin-bottom:1rem;"></div>`;
+            grid.innerHTML += `
+              <a class="writing-card" href="${item.link}" target="_blank" rel="noopener">
+                ${thumbHtml}
+                <p class="writing-title">${item.title}</p>
+                <p class="writing-date">${date}</p>
+                <p class="writing-excerpt">${excerpt}</p>
+                <span class="writing-link">Read on Medium →</span>
+              </a>`;
+          });
+        })
+        .catch(showFallback);
+    })();
+
+    // Nav scroll effect
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
     // Back to top
     const backToTop = document.getElementById('backToTop');
     window.addEventListener('scroll', () => {
