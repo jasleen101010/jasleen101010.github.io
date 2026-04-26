@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>jasleen sondhi</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -275,11 +276,29 @@
       font-size: 0.75rem;
       letter-spacing: 0.05em;
     }
+    /* ABOUT */
     #about p {
       font-size: 1rem;
       color: #a0a0a0;
-      max-width: 500px;
       line-height: 1.75;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 1.25rem;
+    }
+
+    .skill-tag {
+      background: rgba(79, 70, 229, 0.12);
+      border: 0.5px solid rgba(129, 140, 248, 0.3);
+      color: #a5b4fc;
+      font-size: 11px;
+      font-weight: 500;
+      padding: 5px 12px;
+      border-radius: 16px;
+      letter-spacing: 0.02em;
     }
 
     /* WORK / CAROUSEL */
@@ -697,7 +716,18 @@
   <!-- ABOUT -->
   <section id="about">
     <p class="section-label">about</p>
-    <p>I'm a Data Science Professional with ~3 years experience, working on data-driven problem solving within a global banking environment. I use Python, SQL and BI tools to analyze data, build dashboards, and support business decision-making. My work focuses on turning complex data into clear, actionable insights that drive impact. I'm currently looking to grow into roles that combine analytics with product and business strategy.</p>
+    <p>I'm a Data Science Professional with 3 years of experience in one of the world's leading bank HSBC, where I turn messy data into decisions people trust. I build dashboards, design AI systems, and translate technical work into business impact. Right now I'm exploring how multi-agent AI can solve real fintech problems and looking to grow where analytics meets human strategy.</p>
+    <div class="skill-tags">
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">SQL</span>
+      <span class="skill-tag">Excel</span>
+      <span class="skill-tag">BI Tools</span>
+      <span class="skill-tag">Data Visualization</span>
+      <span class="skill-tag">ML</span>
+      <span class="skill-tag">GenAI</span>
+      <span class="skill-tag">Agentic AI</span>
+    </div>
+  </section>
   </section>
 
   <!-- MOMENTS -->
